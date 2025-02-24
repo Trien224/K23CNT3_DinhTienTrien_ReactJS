@@ -23,12 +23,11 @@ function DttApp() {
       <header className='alert alert-info'>
          <DttFunComp name="Dinh tien trien" arddress="10,Xom pho " e="^0^!"/>
     </header>
-    <div className='alert alert-info'>
+    <div className='alert alert-'>
         <DttComp renderInfo={users}/> 
-        </div>
-    <DttClassComp/>
+        
         <DttClassComp renderName="CNTT3" renderUsers={users}/>
-    </div>
+    </div></div>
   );
 }
 

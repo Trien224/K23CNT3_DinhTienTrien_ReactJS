@@ -4,7 +4,7 @@ class DttFrom2 extends Component {
     constructor(props){
         super(props);
         this.state={
-            DttCourse:'CSS3',
+            DttCourse:'Javascript',
         }}
     DttChange =(en)=>{
         this.setState({
@@ -12,26 +12,26 @@ class DttFrom2 extends Component {
         })
     }
     DttSubmit =(e)=>{
-        alert('ProJect: '+this.state.DttCourse);
+        alert('Môn bạn chọn : '+this.state.DttCourse+' ?');
         e.preventDefault();
     }
     render() {
         return (
             <div>
-                 <h4  class='mt-1'>Form Select</h4>
+                 <h4  class='mt-2'>Chọn biểu mẫu </h4>
                 <form>
                     <label htmlFor=''>
                       <select  className='btn btn-light mx-3' name='DttCourse' id='DttCourse'
                             value={this.state.DttCourse}
                             onChange={this.DttChange} >
-                        <option value={'HTML5'}>HTML5</option>
+                        <option value={'Bootstrap'}>Bootstrap</option>
                         <option value={'CSS3'}>CSS3</option>
                         <option value={'Javascript'}>Javascript</option>
                         <option value={'Jquery'}>Jquery</option>
-                        <option value={'Bootstrap'}>Bootstrap</option>
+                        <option value={'HTML5'}>HTML5</option>
                       </select>
                     </label>
-                    <button className='btn btn-dark mx-5' onClick={this.DttSubmit}>Click here  !</button>
+                    <button className='btn btn-warning mx-5' onClick={this.DttSubmit}> Nhấp vào đây !</button>
                 </form>
             </div>
         );

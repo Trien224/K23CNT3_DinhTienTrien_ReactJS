@@ -9,23 +9,25 @@ import DttFrom5 from './com/DttFrom5';
 class DttApp extends Component {
   render() {
     return (
-      <div className=" container border alert alert-warning mt-1 ">
-          <div className="  text text-dark mt-1 ">
+      <div className=" container alert alert-warning mt-1 ">
+          <div className="  text text-light mt-1 ">
         <h1>Đinh Tiến Triển </h1>
-        <h3>~Cv Of You!</h3>
+        <h3>~Cv dành cho bạn! !</h3>
           </div>
-                <div className=" container border text text-dark alert alert-info mt-1 ">
+                <div className=" container border text text-light alert mt-1 ">
         <DttFrom1/>
         
-        <DttFrom3/>
+        <DttFrom2/>
         
-         <DttFrom2/>
+        <DttFrom3/>
        
         <DttFrom4/>
         
         <DttFrom5/>
                 </div>
+                www.trumcho.com
       </div>
+      
     );
   }
 }

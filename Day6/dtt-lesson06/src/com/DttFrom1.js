@@ -4,7 +4,7 @@ class DttFrom1 extends Component {
     constructor(props){
         super(props);
         this.state={
-            DttName:'Vui lòng viết tên bạn',
+            DttName:' Vui lòng nhập họ tên !',
         }}
 
         DttChange =(event)=>{
@@ -20,14 +20,14 @@ class DttFrom1 extends Component {
     render() {
         return (
             <div>
-                <h4>Name</h4>
+                <h4>Họ và tên </h4>
                 <from>
                     <label htmlFor=''>
-                        <input className='btn btn-light mx-3' type='text' name='Dtt' id="Dtt" 
-                        placeholder='Vui lòng viết tên bạn' 
+                        <input className='btn btn-light mx-3 ' type='text' name='Dtt' id="Dtt" 
+                        placeholder='Vui lòng viết tên bạn... ' 
                         onChange={this.DttChange} />
                     </label>
-                    <button className='btn btn-warning'onClick={this.DttSubmit}>Click</button>
+                    <button className='btn btn-warning'onClick={this.DttSubmit}>Nhấn vào</button>
                 </from>
             </div>
         );

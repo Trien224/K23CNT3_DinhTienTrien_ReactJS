@@ -3,10 +3,10 @@ class DttFrom5 extends Component {
     constructor(props){
         super(props);
         this.state = {
-           DttName:'Trienne',
-           DttAge:20,
-           DttGender:'Female',
-           DttCourse:'CSS3'} }
+            DttName:'Vui lòng nhập họ tên !',
+            DttAge:'Vui lòng nhập tuổi  !',
+            DttGender:'Vui lòng chọn giới tính !',
+            DttCourse:'CSS3'} }
 
    DttChange = (event)=>{
         let name = event.target.name;   let value = event.target.value;
@@ -17,46 +17,46 @@ class DttFrom5 extends Component {
    DttSubmit = (event)=>{
         
         alert(this.state.DttName + "\n" + this.state.DttAge+"\n"
-        +this.state.DttGender+"\n"+this.state.DttCourse)
+        +this.state.DttGender+" ?"+"\n"+this.state.DttCourse)
         event.preventDefault();
     }
     render() {
         return (
             <div>
-                <h4 class='mt-3'>Form Student Info </h4>
+                <h4 class='mt-3'>Biểu mẫu thông tin sinh viên </h4>
                 <form>
                     <div>
-                        <label htmlFor='DttName'>Student Name :</label>
-                        <input className='btn btn-light mx-4' type='text' name='DttName' id='DttName'
+                        <label htmlFor='DttName'>Tên học sinh:</label>
+                        <input className='btn btn-light mx-5' type='text' name='DttName' id='DttName'
                              placeholder='Vui lòng viết tên bạn'
                             onChange={this.DttChange} />
                     </div>
                     <div>
-                        <label htmlFor='DttAge'>Student Age:</label>
-                        <input className='btn btn-light mt-1 mx-5'type='text' name='DttAge' id='DttAge'
+                        <label htmlFor='DttAge'>Độ tuổi của học sinh:</label>
+                        <input className='btn btn-light mt-1 mx-2'type='text' name='DttAge' id='DttAge'
                             placeholder='Vui lòng nhập tuổi bạn'
                             onChange={this.DttChange} />
                     </div>
-                            <label htmlFor='DttGender'>Student Gender:</label>   
-                    <div className='btn btn-light mt-1 mx-4'>
+                            <label htmlFor='DttGender'>Giới tính của học sinh:</label>   
+                    <div className='btn btn-light mt-1 mx-3'>
                         
                             <input type='radio' name='DttGender' id='DttMale' className='mx-2'
-                                value={'Male'}
-                                checked={this.state.DttGender === 'Male'}
+                                value={'Nam'}
+                                checked={this.state.DttGender === 'Nam'}
                                 onChange={this.DttChange} />
-                            <label htmlFor='DttMale'> Male</label>
+                            <label htmlFor='DttMale'> Nam </label>
                         
                             <input type='radio' name='DttGender' id='DttFemale' className='mx-2'
-                                value={'Female'}
-                                checked={this.state.DttGender === 'Female'}
+                                value={'Nữ'}
+                                checked={this.state.DttGender === 'Nữ'}
                                 onChange={this.DttChange} />
-                            <label htmlFor='DttFemale'> Female</label>
+                            <label htmlFor='DttFemale'>Nữ </label>
                         
                             <input type='radio' name='DttGender' id='DttNone' className='mx-2'
-                                value={'None'}
-                                checked={this.state.DttGender === 'None'}
+                                value={'Babythree3'}
+                                checked={this.state.DttGender === 'Babythree3'}
                                 onChange={this.DttChange} />
-                            <label htmlFor='DttNone'> None</label>
+                            <label htmlFor='DttNone'>Khác </label>
                        
                     </div>
                     <div>
@@ -72,7 +72,7 @@ class DttFrom5 extends Component {
                             </select>
                         </label>
                     </div>
-                    <button className='mx-2 mt-2 btn btn-info' onClick={this.DttSubmit}>Submit</button>
+                    <button className='mx-2 mt-2 btn btn-info' onClick={this.DttSubmit}>Nộp </button>
                 </form>
             </div>
         );

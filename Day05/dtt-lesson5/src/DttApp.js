@@ -17,52 +17,52 @@ class DttApp extends Component {
   render() {
     return (
      
-      <div className="text-center container border alert alert-light mt-3 ">
+      <div className="text-center container border alert alert-warning mt-3 ">
 
         <h1 className=' text-center my-3'>K23-CNT3 </h1>
         <h1 className=' text-center my-3'> Dinh Tien Trien</h1>
-        
+        <div className='container border btn btn-warning mx-4 my-4'>
           <hr/>  
-        <h3 className=' alert alert-dark mx-4 my-4'>Function -Event
+        <h3 >Function -Event
         <div className='A'>
           <DttFuncEvent1/>
           </div>
         </h3>
 
           <hr/>
-        <h3 className=' alert alert-dark mx-4 my-4'>Class -Event
+        <h3 >Class -Event
         <div className='A'>
           <DttClassEvent1/>
         </div>
         </h3>
 
           <hr/>
-        <h4 className=' alert alert-dark mx-4 my-4'>Function -Props
+        <h4 >Function -Props
         <div className='A'>
           <DttFuncProps DttRenderName="Trien ne!"/>
         </div>
         </h4>
 
           <hr/>
-        <h4 className=' alert alert-dark mx-4 my-4'>Class -Props
+        <h4 >Class -Props
         <div className='A'>
           <DttClassProps DttRenderTite=" Fuck you"/>
         </div>
         </h4>
 
-        <h4 className=' alert alert-dark mx-4 my-4'>Class -State
+        <h4 >Class -State
         <div className='A'>
           <DttClassState/>
         </div>
         </h4>
 
-        <h4 className=' alert alert-dark mx-4 my-4'>Class -Post Data
+        <h4 >Class -Post Data
         <div className='A'> <h1>{this.setState.FullName}</h1>
           <DttClassPostDate onDttDataToApp={this.DttClassPostDate}/>
          
         </div>
         </h4>
-
+</div>
 </div>
     );
   }

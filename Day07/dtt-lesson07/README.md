@@ -1,4 +1,3 @@
-<h1>K23-CNTT3- Đinh Tiến TriểnTriển </h1>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

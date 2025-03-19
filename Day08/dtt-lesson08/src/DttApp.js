@@ -4,7 +4,6 @@ import DttControl from './com/DttControl';
 import DttForm from './com/DttForm';
 import DttStudentList from './com/DttStudentList';
 
-
 class DttApp extends Component {
   constructor(props){
     super(props);
@@ -16,7 +15,6 @@ class DttApp extends Component {
         {DttId:"SV04",DttStudentName:"Vegetoto",DttAge:56,DttGender:"Nam",DttBirthday:"25/05/1779",DttBirthPlace:"Nhật", DttAddress:"Nhật"},
       ],
       DttStudent:"",
-
     }
   }
   // Hàm xử lý sự kiện view Student
@@ -35,22 +33,19 @@ class DttApp extends Component {
         <h1 className="text-center alert alert-warning">
           Đinh Tiến Triển - K23CNT3 - Mini Project1
         </h1>
-        <section className="container-fluid mt-3">
-          <div className="row">
+          <section className="container-fluid mt-3">
+              <div className="col-lg-7 grid-margin stretch-card">
+                <div className="card">
+                  <DttControl/>
 
-            <div className="col-lg-7 grid-margin stretch-card">
-              <div className="card">
-                <DttControl  />
-                <DttStudentList  renderDttStudents={this.state.DttStudents} onDttHandleView={this.DttHandleView}/>
+                  <DttStudentList  renderDttStudents={this.state.DttStudents} onDttHandleView={this.DttHandleView}/>
+                </div>
               </div>
-            </div>
-
-            <div className="col-5 grid-margin">
-              {/* form  */}
-              <DttForm  renderDttStudent = {this.state.DttStudent}/>
-            </div>
-          </div>
-        </section>
+              <div className="col-5 grid-margin">
+   
+                <DttForm  renderDttStudent = {this.state.DttStudent}/>
+              </div>
+          </section>
       </div>
     );
   }

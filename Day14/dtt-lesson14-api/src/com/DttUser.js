@@ -56,10 +56,10 @@ export default function DttUser() {
         setDttListUser(updatedUsers);
         setSelectedUser(null);
         setFormData({
-          nct_Name: "",
-          nct_Email: "",
-          nct_Phone: "",
-          nct_Active: false,
+          Dtt_Name: "",
+          Dtt_Email: "",
+          Dtt_Phone: "",
+          Dtt_Active: false,
         });
       })
       .catch((error) => {
@@ -87,7 +87,7 @@ export default function DttUser() {
               <td>{Dtt_item.Dtt_Name}</td>
               <td>{Dtt_item.Dtt_Email}</td>
               <td>{Dtt_item.Dtt_Phone}</td>
-              <td>{Dtt_item.DttActive?'Hoạt động':'Khóa'}</td>
+              <td>{Dtt_item.Dtt_Active ? 'Hoạt động' : 'Khóa' }</td>
               <td>
           <button
             className="btn btn-success"
@@ -106,8 +106,9 @@ export default function DttUser() {
       )
   })
 return (
-  <div className='alert alert-danger'>
+  <div className=' text-center'>
       <h2>Danh sách</h2>
+      <hr/>
       <table className='table table-bordered'>
           <thead>
               <tr>
@@ -133,7 +134,7 @@ return (
               <label>Tên:</label>
               <input
                 type="text"
-                name="nct_Name"
+                name="Dtt_Name"
                 className="form-control"
                 value={formData.Dtt_Name}
                 onChange={handleChange}
@@ -144,7 +145,7 @@ return (
               <label>Email:</label>
               <input
                 type="email"
-                name="nct_Email"
+                name="Dtt_Email"
                 className="form-control"
                 value={formData.Dtt_Email}
                 onChange={handleChange}
@@ -155,7 +156,7 @@ return (
               <label>Điện thoại:</label>
               <input
                 type="text"
-                name="nct_Phone"
+                name="Dtt_Phone"
                 className="form-control"
                 value={formData.Dtt_Phone}
                 onChange={handleChange}
@@ -166,7 +167,7 @@ return (
               <label>Trạng thái:</label>
               <input
                 type="checkbox"
-                name="nct_Active"
+                name="Dtt_Active"
                 checked={formData.Dtt_Active}
                 onChange={handleChange}
               />
